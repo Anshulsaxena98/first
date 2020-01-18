@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>running panda</title>
+    
+</head>
+<style>
+
+body {
+	
+	margin: 0;
+	padding: 0;
+
+}
+.ground{
+	background: url('ground1.png');
+	height: 700px;
+	width: 100%;
+
+	
+}
+.panda-container{
+	position: relative;
+	top:50%;
+	transform: translate (-50%,-50%);
+	will-change:transform;
+	animation: pda 2s linear infinite ;
+	}
+
+.panda{
+	background: url('pandaa.png');
+	margin-top: 40px;
+	margin-left: 2em;
+	height: 140px;
+	width: 14%;
+	animation: walk 1s steps(9) infinite,
+				forward 6s linear infinite;
+	top: 65%;
+	position: absolute;
+	float: left;
+
+}
+
+@keyframes walk{
+	0%{
+		background-position: 0px;
+	}
+	100%{
+		background-position: 1600px;
+	}
+}
+@keyframes forward{
+	0%{
+		transform: translateX(0px);
+	}
+	100%{
+		transform: translateX(900px);
+	}
+}
+</style>
+<body>
+   <div class="ground">
+   <div class="panda-container">
+		    <div class="panda">
+   </div>
+</body>
+</html>
